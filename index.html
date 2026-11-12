@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssTowerOfHanoi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/towerOfHanoiLogo.png">
+    <title>Tower Of Hanoi</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="navButton">
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="4">4</button>
+            <button id="5">5</button>
+        </div>
+        <h1>Tower Of Hanoi</h1>
+        <div class="navButton">
+            <button id="6">6</button>
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+            <button id="10">10</button>
+        </div>
+        
+    </div>
+
+    <div class="towerSection">
+        <div class="diskDisplays">
+            <div class="diplayDiskNo"><button class="disk0" id="diskDisplaysPillars1"></button></div>
+            <div class="diplayDiskNo"><button class="disk0" id="diskDisplaysPillars2"></button></div>
+            <div class="diplayDiskNo"><button class="disk0" id="diskDisplaysPillars3"></button></div>
+        </div>
+        <div class="detection">
+            <button id="pillars1detection"></button>
+            <button id="pillars2detection"></button>
+            <button id="pillars3detection"></button>
+        </div>
+
+        <div class="pillars">
+            <div class="pillars1">
+                <button class="disk0" id="Row1Column1"></button>
+                <button class="disk0" id="Row1Column2"></button>
+                <button class="disk0" id="Row1Column3"></button>
+                <button class="disk0" id="Row1Column4"></button>
+                <button class="disk0" id="Row1Column5"></button>
+                <button class="disk0" id="Row1Column6"></button>
+                <button class="disk0" id="Row1Column7"></button>
+                <button class="disk1" id="Row1Column8"></button>
+                <button class="disk2" id="Row1Column9"></button>
+                <button class="disk3" id="Row1Column10"></button>
+            </div>
+            <div class="pillars2">
+                <button class="disk0" id="Row2Column1"></button>
+                <button class="disk0" id="Row2Column2"></button>
+                <button class="disk0" id="Row2Column3"></button>
+                <button class="disk0" id="Row2Column4"></button>
+                <button class="disk0" id="Row2Column5"></button>
+                <button class="disk0" id="Row2Column6"></button>
+                <button class="disk0" id="Row2Column7"></button>
+                <button class="disk0" id="Row2Column8"></button>
+                <button class="disk0" id="Row2Column9"></button>
+                <button class="disk0" id="Row2Column10"></button>
+            </div>
+            <div class="pillars3">
+                <button class="disk0" id="Row3Column1"></button>
+                <button class="disk0" id="Row3Column2"></button>
+                <button class="disk0" id="Row3Column3"></button>
+                <button class="disk0" id="Row3Column4"></button>
+                <button class="disk0" id="Row3Column5"></button>
+                <button class="disk0" id="Row3Column6"></button>
+                <button class="disk0" id="Row3Column7"></button>
+                <button class="disk0" id="Row3Column8"></button>
+                <button class="disk0" id="Row3Column9"></button>
+                <button class="disk0" id="Row3Column10"></button>
+            </div>
+        </div>
+        <div class="base">
+            <div class="sound">
+                <audio class="backSound" id="startSound"
+                    src="assets/backSound.mp4" loop></audio>
+
+                <button class="pauseButton" id="pauseButton">
+                    <i id="backSoundStartIcon" class="fa-solid fa-play"></i>
+                </button>
+            </div>
+            
+            <div class="moves">
+                <i class="myMoves" id="myMoves">0</i>
+                <i class="slash" id="slash">/</i>
+                <i class="optimalMoves" id="optimalMoves">7</i>
+            </div>
+
+            <div class="timer">
+                <p id="timer">00:00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="winSection">
+        <div class="winPopUp">
+
+            <div class="scoreCongrats">
+                <h1 class="f1">CONGRATULATIONS!</h1>
+                <h5 class="f2" id="level">Level 1</h5>
+                <h2 class="f3"> COMPLETED </h2>
+            </div>
+
+            <h3 id="score" class="f4">SCORE</h3>
+
+            <div class="scoreDisk">
+                <p class="f5">DISK :</p>
+                <i id="diskAmount" class="f6">5</i>
+            </div>
+
+            <div class="scoreTime">
+                <p class="f7">TIME : </p>
+                <p id="timeAmount" class="f8">10 : 10</p>
+            </div>
+
+            <div class="scoreMoves">
+                <p class="f9">MOVE : </p>
+                <p id="moveAmount" class="f10">31 / 31</p>
+            </div>
+
+            <div class="grade">
+                <h1 class="f11">GRADE</h1>
+                <h1 id="gradeAmount" class="f12">A</h2>
+            </div>
+            
+            <button class="f13" id="startAgain">START</button>
+        </div>
+
+        <div class="falling">🎊</div>
+        <div class="falling">🌸</div>
+        <div class="falling">🎉</div>
+        <div class="falling">🌷</div>
+        <div class="falling">🌺</div>
+        <div class="falling">🎊</div>
+        <div class="falling">🎉</div>
+        <div class="falling">🌸</div>
+        <div class="falling">🌺</div>
+        <div class="falling">🌷</div>
+        <div class="falling">🎉</div>
+        <div class="falling">🎊</div>
+    </div>
+
+    <script src="jsTowerOfHanoi.js"></script>
+</body>
+</html>
